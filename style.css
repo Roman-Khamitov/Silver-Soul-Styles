@@ -37,3 +37,8 @@ header {
     text-decoration: none;
     color: #333;
 }
+.logo {
+    position: relative;
+    left: 50px;
+    bottom: 40px;
+}
