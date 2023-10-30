@@ -93,3 +93,30 @@ header {
 .t-shirt {
     padding: 50px;
 }
+.categorys-top {
+    position: relative;
+    top: 160px;
+    display: flex;
+    justify-content: center;
+    right: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.categorys {
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    color: #333;
+    list-style-type: none;
+    right: 20px;
+}
+.category-item {
+    padding: 100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.category-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+}
