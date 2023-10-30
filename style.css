@@ -93,3 +93,66 @@ header {
 .t-shirt {
     padding: 50px;
 }
+.goods {
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: center;    
+}
+.title {
+    position: relative;
+    top: 160px;
+    display: flex;
+    justify-content: center;
+    right: 40px;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+}
+.goods-categorys {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #333;
+    display: flex;
+    margin: 0;
+    padding: 40px;
+    list-style: none;
+}
+.goods-item {
+    position: relative;
+}
+.goods-item:hover > .goods-subcategorys {
+    display: block;
+}
+.goods-link {
+    display: block;
+    padding: 8px 16px;
+    background-color: #444;
+    color: #d49797;
+    text-decoration: none;
+}
+.goods-link:hover {
+    background-color: #ffffff;
+}
+.goods-subcategorys {
+    display: none;
+    min-width: 100;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.goods-sublink {
+    display: block;
+    padding: 8px 16px;
+    background-color: #c2a2a2;
+    color: #fff;
+    text-decoration: none;
+}
+.goods-sublink:hover {
+    background-color: #444;
+}
