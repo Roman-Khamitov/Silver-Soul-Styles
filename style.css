@@ -95,7 +95,7 @@ header {
 }
 .goods {
     position: relative;
-    top: 200px;
+    top: 100px;
     display: flex;
     justify-content: center;    
 }
@@ -112,7 +112,7 @@ header {
 .goods-categorys {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    color: #333;
+    color: #a3a3a3;
     display: flex;
     margin: 0;
     padding: 40px;
@@ -127,8 +127,8 @@ header {
 .goods-link {
     display: block;
     padding: 8px 16px;
-    background-color: #444;
-    color: #d49797;
+    background-color: #ffffff;
+    color: #333;
     text-decoration: none;
 }
 .goods-link:hover {
@@ -149,10 +149,40 @@ header {
 .goods-sublink {
     display: block;
     padding: 8px 16px;
-    background-color: #c2a2a2;
-    color: #fff;
+    background-color: #afafaf;
+    color: #000000;
     text-decoration: none;
 }
 .goods-sublink:hover {
     background-color: #444;
 }
+.advantages {
+    display: flex;
+    position: relative;
+    top: 200px;
+    justify-content: center;
+    list-style: none;
+}
+.advantages-item {
+    padding: 20px;
+    width: 220px;
+    height: 220px;
+}
+.advantages-title {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.advantages-icon {
+    position: relative;
+    left: 60px;
+}
+.advantages-text {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    left: 15px;
+    position: relative;
+}
+
