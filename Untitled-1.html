@@ -52,6 +52,27 @@
     </ul>
 </header>
 <body>
+    <button id="myBtn">Открыть окно</button>
+
+
+<div id="myModal" class="modal">
+
+ 
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Шапка модального окна</h2>
+    </div>
+    <div class="modal-body">
+      <p>Какой-то текст в теле модального окна</p>
+      <p>Ещё другой текст...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Футер модального окна</h3>
+    </div>
+  </div>
+
+</div>
     <div class="slider">
         <marquee behavior="alternate" direction="right" scrollamount="5">
             <img class="t-shirt" height="150" width="150" src="src/t-shirt-1.png" alt="футболка 1">
@@ -177,7 +198,19 @@
         </li>
     </ul>
  </div>
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Поиск имен..">
 
-    
+<ul id="myUL">
+  <li><a href="#">Андрей</a></li>
+  <li><a href="#">Алексей</a></li>
+
+  <li><a href="#">Борис</a></li>
+  <li><a href="#">Владимир</a></li>
+
+  <li><a href="#">Сергей</a></li>
+  <li><a href="#">Кристина</a></li>
+  <li><a href="#">Татьяна</a></li>
+</ul>
+    <script src="main.js"></script>
 </body>
 </html>
