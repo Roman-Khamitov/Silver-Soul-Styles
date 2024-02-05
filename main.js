@@ -41,3 +41,28 @@ function myFunction() {
       }
     }
   }
+  // Получить модальный
+var login = document.getElementById("loginModal");
+
+// Получить кнопку, которая открывает модальный
+var button = document.getElementById("modalBtn");
+
+// Получить элемент <span>, который закрывает модальный
+var span = document.getElementsByClassName("close")[0];
+
+// Когда пользователь нажимает на кнопку, откройте модальный
+button.onclick = function() {
+  login.style.display = "block";
+}
+
+// Когда пользователь нажимает на <span> (x), закройте модальное окно
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Когда пользователь щелкает в любом месте за пределами модального, закройте его
+window.onclick = function(event) {
+  if (event.target == login) {
+    login.style.display = "none";
+  }
+}

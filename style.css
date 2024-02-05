@@ -187,17 +187,17 @@ header {
 }
 
 #myBtn {
-    background-color: #333;
-    color: white;
+    background-color: rgb(128, 127, 127);
+    color: #333;
     padding: 12px 16px;
     font-size: 18px;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    width: 180px;
+    width: 206px;
     position: relative;
-    top: 700px;
-    left: 830px;
+    top: 101px;
+    left: 1632px;
   }
   
   
@@ -305,3 +305,55 @@ header {
   #myUL li a:hover:not(.header) {
     background-color: #eee; /* Добавить эффект наведения на все ссылки, кроме заголовков */
   }
+#modalBtn {
+    background-color: rgb(128, 127, 127);
+    color: #333;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 206px;
+    position: relative;
+    bottom: 736px;
+    left: 1400px;
+  }
+   /* Модальный (фон) */
+ /* Модальный (фон) */
+ .modal-login {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Цвет запасной вариант */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+  }
+  
+  /* Модальное содержание/коробка */
+  .login-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  }
+  
+  /* Кнопка закрытия */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

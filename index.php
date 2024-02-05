@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,13 +17,13 @@
             <a class="contact-link" href="#">О компании</a>
         </li>
         <li class="contact-item">
-            <a class="contact-link" href="#">Доставка</a>
+            <a class="contact-link" href="https://qiwi.com">Оплата</a>
         </li> 
         <li class="contact-item">
-            <a class="contact-link" href="#">Оплата</a>
+            <a class="contact-link" ><?= $_SESSION['user']['email']?></a>
         </li>
         <li class="contact-item">
-            <a class="contact-link" href="#">Возврат</a>
+            <a class="contact-link"><?= $_SESSION['user']['full_name']?></a>
         </li>
     </ul>
     <ul class="link-menu">
@@ -27,7 +31,7 @@
             <a class="link-contact" href="#">Магазины</a>
         </li>
         <li class="link-item">
-            <a class="link-contact" href="#">+7(771)9885372</a>
+            <a class="link-contact" href="vendor/logout.php">Выход</a>
         </li>
     </ul>
     <div class="header-main">
@@ -39,20 +43,9 @@
             <img src="src/button.svg" width="20" height="20">
         </button>
     </div>
-    <ul class="main-menu">
-        <li class="main-item">
-            <a class="main-link" href="#">Избранное</a>
-        </li>
-        <li class="main-item">
-            <a class="main-link" href="#">Войти</a>
-        </li>
-        <li class="main-item">
-            <a class="main-link" href="#">Корзина</a>
-        </li>
-    </ul>
 </header>
 <body>
-    <button id="myBtn">Открыть окно</button>
+    <button id="myBtn">Зарегистрироваться</button>
 
 
 <div id="myModal" class="modal">
@@ -64,8 +57,32 @@
       <h2>Шапка модального окна</h2>
     </div>
     <div class="modal-body">
-      <p>Какой-то текст в теле модального окна</p>
-      <p>Ещё другой текст...</p>
+    <form action="vendor/signup.php" method="post" enctype="multipart/form-data">
+        <label>ФИО</label>
+        <input required type="text" name="full_name" placeholder="Введите свое полное имя">
+        <label>Логин</label>
+        <input type="text" name="login" placeholder="Введите свой логин">
+        <label>Почта</label>
+        <input type="email" name="email" placeholder="Введите адрес своей почты">
+        <label>Изображение профиля</label>
+        <input type="file" name="avatar">
+        <label>Пароль</label>
+        <input type="password" name="password" placeholder="Введите пароль">
+        <label>Подтверждение пароля</label>
+        <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
+        <button type="submit">Войти</button>
+        <p>
+           <a href="/index.php">Вернуться на сайт</a>
+        </p>
+
+        <?php
+            if ($_SESSION['message']) {
+                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+            }
+            unset($_SESSION['message']);
+        ?>
+
+    </form>
     </div>
     <div class="modal-footer">
       <h3>Футер модального окна</h3>
@@ -198,19 +215,33 @@
         </li>
     </ul>
  </div>
- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Поиск имен..">
+ <!-- Триггер/Открыть модальный -->
+<button id="modalBtn">войти</button>
 
-<ul id="myUL">
-  <li><a href="#">Андрей</a></li>
-  <li><a href="#">Алексей</a></li>
+<!-- Модальный -->
+<div id="loginModal" class="modal-login">
 
-  <li><a href="#">Борис</a></li>
-  <li><a href="#">Владимир</a></li>
+  <!-- Модальное содержание -->
+  <div class="login-content">
+    <span class="close">&times;</span>
+    <form action="vendor/signin.php" method="post">
+        <label>Логин</label>
+        <input type="text" name="login" placeholder="Введите свой логин">
+        <label>Пароль</label>
+        <input type="password" name="password" placeholder="Введите пароль">
+        <button type="submit">Войти</button>
 
-  <li><a href="#">Сергей</a></li>
-  <li><a href="#">Кристина</a></li>
-  <li><a href="#">Татьяна</a></li>
-</ul>
-    <script src="main.js"></script>
+          <a href="/register.php">зарегистрируйтесь</a>
+
+        <?php
+        if ($_SESSION['message']) {
+            echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+        }
+        unset($_SESSION['message']);
+        ?>
+    </form>
+  </div>
+</div>
+ <script src="/main.js"></script>
 </body>
 </html>
